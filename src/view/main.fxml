@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Menu">
+    <children>
+        <BorderPane fx:id="borderPane" layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <JFXDrawer fx:id="contentDrawer" style="-fx-background-color: grey;" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <VBox minWidth="189.0" prefHeight="500.0" prefWidth="190.0" style="-fx-background-color: #225F67;" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" />
+                  <JFXButton onAction="#showHome" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #378D98;" text="На главную" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#showCards" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #378D98;" text="Мои карты" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#showActions" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #378D98;" text="Операции" textFill="WHITE" />
+                  <JFXButton onAction="#showAboutUs" prefHeight="40.0" prefWidth="190.0" style="-fx-background-color: #378D98;" text="Статистика" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+        </BorderPane>
+
+    </children>
+</AnchorPane>
