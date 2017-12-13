@@ -8,13 +8,13 @@ import model.CurrentUserModel;
 
 public class TransferController {
     @FXML public TextField receiver;
-    @FXML public TextField transferSum;
+    @FXML public TextField money;
 
     @FXML
     public void transfer(ActionEvent actionEvent) {
         ServerConnection connection = ServerConnection.getInstance();
         try {
-            connection.sendMessage("TRANSFER%21" + receiver.getText() + "%20" + transferSum.getText() + "%20" + CurrentUserModel.getInstance().getCurrentCard().getNumber());
+            connection.sendMessage("TRANSFER%21" + receiver.getText() + "%20" + money.getText() + "%20" + CurrentUserModel.getInstance().getCurrentCard().getNumber());
         } catch (Exception e) {
         }
     }

@@ -24,7 +24,9 @@ public class Client extends Application {
 
     private void closeProgram() {
         try {
-            ServerConnection.getInstance().stop();
+            if (ServerConnection.getInstance().isStarted()) {
+                ServerConnection.getInstance().stop();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

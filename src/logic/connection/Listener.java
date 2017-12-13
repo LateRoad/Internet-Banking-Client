@@ -1,6 +1,6 @@
 package logic.connection;
 
-import command.CommandManager;
+import logic.response.CommandManager;
 
 public class Listener extends Thread {
     @Override

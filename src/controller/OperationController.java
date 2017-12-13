@@ -11,21 +11,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OperationsController implements Initializable {
+public class OperationController implements Initializable {
     @FXML
     public JFXDrawer operationDrawer;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        showContent("/view/content/operations/transfer.fxml");
+        showContent("/view/content/operation/transfer.fxml");
     }
 
     public void showPayment(ActionEvent actionEvent) {
-        showContent("/view/content/operations/payment.fxml");
+        showContent("/view/content/operation/payment.fxml");
     }
 
     public void showTransfer(ActionEvent actionEvent) {
-        showContent("/view/content/operations/transfer.fxml");
+        showContent("/view/content/operation/transfer.fxml");
     }
 
     private void showContent(String path) {

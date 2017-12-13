@@ -12,10 +12,12 @@ public class ServerConnection {
 
     private ObjectInputStream clientReader;
     private ObjectOutputStream clientWriter;
+    private boolean isStarted;
 
     private static final ServerConnection instance = new ServerConnection();
 
     private ServerConnection() {
+        isStarted = false;
     }
 
     public static ServerConnection getInstance() {
@@ -23,16 +25,17 @@ public class ServerConnection {
     }
 
     public void start() throws IOException {
-        try (Socket serverSocket = new Socket("localhost", 4244)) {
+        Socket serverSocket = new Socket("localhost", 4244);
             clientWriter = new ObjectOutputStream(serverSocket.getOutputStream());
             clientReader = new ObjectInputStream(serverSocket.getInputStream());
-        }
+            isStarted = true;
     }
 
     public void stop() throws IOException {
         sendMessage("EXIT");
         clientWriter.close();
         clientReader.close();
+        isStarted = false;
     }
 
     public void sendMessage(String message) throws IOException {
@@ -53,7 +56,11 @@ public class ServerConnection {
     }
 
     public void startListen() {
-        Thread listener = new Thread();
+        Thread listener = new Listener();
         listener.start();
+    }
+
+    public boolean isStarted() {
+        return isStarted;
     }
 }

@@ -9,7 +9,7 @@
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TransferController">
     <TextField fx:id="receiver" alignment="TOP_CENTER" layoutX="155.0" layoutY="166.0" prefWidth="300.0"
                promptText="Введите номер карты получателя"/>
-    <TextField fx:id="transferSum" alignment="TOP_CENTER" layoutX="155.0" layoutY="215.0" prefWidth="300.0"
+    <TextField fx:id="money" alignment="TOP_CENTER" layoutX="155.0" layoutY="215.0" prefWidth="300.0"
                promptText="Введите сумму перевода"/>
     <Text layoutX="236.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Переводы">
         <font>

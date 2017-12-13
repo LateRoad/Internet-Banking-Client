@@ -1,6 +1,5 @@
 package controller;
 
-import command.CommandManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import logic.connection.ServerConnection;
+import logic.response.CommandManager;
 import logic.security.HashMessage;
 import logic.switcher.SceneSwitcher;
 
@@ -42,6 +42,7 @@ public class LoginController {
                 SceneSwitcher.toScene(rootPane, "/view/main.fxml");
             }
         } catch (Exception e) {
+            e.printStackTrace();
             error.setText("Неверный логин или пароль.");
             error.setVisible(true);
         }
