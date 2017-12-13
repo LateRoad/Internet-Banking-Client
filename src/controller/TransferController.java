@@ -1,14 +1,16 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import logic.connection.ServerConnection;
 import model.CurrentUserModel;
 
-public class Transfer {
-    public TextField receiver;
-    public TextField transferSum;
+public class TransferController {
+    @FXML public TextField receiver;
+    @FXML public TextField transferSum;
 
+    @FXML
     public void transfer(ActionEvent actionEvent) {
         ServerConnection connection = ServerConnection.getInstance();
         try {

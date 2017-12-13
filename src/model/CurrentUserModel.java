@@ -4,11 +4,12 @@ import logic.entity.Card;
 import logic.entity.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CurrentUserModel {
     private User currentUser;
     private Card currentCard;
-    private ArrayList<Card> cards;
+    private List<Card> cards;
     private static final CurrentUserModel instance = new CurrentUserModel();
 
     private CurrentUserModel() {
@@ -27,11 +28,11 @@ public class CurrentUserModel {
         this.currentUser = currentUser;
     }
 
-    public ArrayList<Card> getCards() {
+    public List<Card> getCards() {
         return cards;
     }
 
-    public void setCards(ArrayList<Card> cards) {
+    public void setCards(List<Card> cards) {
         this.cards = cards;
     }
 
@@ -39,8 +40,8 @@ public class CurrentUserModel {
         return cards.get(i);
     }
 
-    public void setCard(int i, Card card) {
-        this.cards = cards;
+    public void setCard(int index, Card card) {
+        this.cards.set(index, card);
     }
 
     public Card getCurrentCard() {

@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane minHeight="400.0" minWidth="610.0" prefHeight="400.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Payment">
-   <children>
-      <Text layoutX="128.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" />
-   </children>
+<AnchorPane minHeight="400.0" minWidth="610.0" prefHeight="400.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentController">
+    <VBox>
+        <HBox alignment="CENTER" maxHeight="60.0" maxWidth="610.0" minHeight="60.0" minWidth="610.0" prefHeight="60.0"
+              prefWidth="610.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Платежи">
+                <font>
+                    <Font name="Avenir Heavy" size="27.0"/>
+                </font>
+            </Text>
+        </HBox>
+    </VBox>
+    <HBox alignment="CENTER" layoutY="60.0" prefHeight="100.0" prefWidth="610.0">
+        <VBox maxHeight="100.0" maxWidth="100.0" minHeight="340.0" minWidth="200.0" prefHeight="313.0"
+              prefWidth="100.0">
+            <ListView prefHeight="340.0" prefWidth="200.0"/>
+        </VBox>
+        <VBox alignment="CENTER" maxHeight="300.0" maxWidth="300.0" minHeight="340.0" minWidth="410.0"
+              prefHeight="200.0" prefWidth="100.0">
+            <JFXDrawer/>
+        </VBox>
+    </HBox>
 </AnchorPane>

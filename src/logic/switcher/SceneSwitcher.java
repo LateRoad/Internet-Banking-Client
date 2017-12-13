@@ -12,7 +12,6 @@ import javafx.util.Duration;
 import java.io.IOException;
 
 public class SceneSwitcher {
-
     public static void toScene(Pane scenePane, String fxmlPath) {
         FadeTransition sceneAnimation = new FadeTransition();
         sceneAnimation.setDuration(Duration.millis(100));

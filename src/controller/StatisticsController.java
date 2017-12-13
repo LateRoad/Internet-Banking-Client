@@ -10,7 +10,7 @@ import javafx.scene.chart.XYChart;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AboutUs implements Initializable{
+public class StatisticsController implements Initializable{
     @FXML
     private LineChart<?, ?> lineChart;
 

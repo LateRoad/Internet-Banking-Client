@@ -3,20 +3,18 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import javafx.scene.layout.*?>
-<AnchorPane minHeight="500.0" minWidth="610.0" prefHeight="500.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Operations">
-   <children>
-      <BorderPane prefHeight="500.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
+<AnchorPane minHeight="500.0" minWidth="610.0" prefHeight="500.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OperationsController">
+    <BorderPane prefHeight="500.0" prefWidth="610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <top>
             <HBox prefHeight="100.0" prefWidth="610.0" BorderPane.alignment="CENTER">
-               <children>
-                  <JFXButton onAction="#showPayment" prefHeight="100.0" prefWidth="100.0" text="Платежи" />
-                  <JFXButton onAction="#showTransfer" prefHeight="106.0" prefWidth="100.0" text="Переводы" />
-               </children>
+                <JFXButton onAction="#showPayment" prefHeight="100.0" prefWidth="100.0" text="Платежи"/>
+                <JFXButton onAction="#showTransfer" prefHeight="106.0" prefWidth="100.0" text="Переводы"/>
             </HBox>
-         </top>
-         <center>
-            <JFXDrawer fx:id="operationDrawer" BorderPane.alignment="CENTER" />
-         </center>
-      </BorderPane>
-   </children>
+        </top>
+        <center>
+            <JFXDrawer fx:id="operationDrawer" BorderPane.alignment="CENTER"/>
+        </center>
+    </BorderPane>
 </AnchorPane>

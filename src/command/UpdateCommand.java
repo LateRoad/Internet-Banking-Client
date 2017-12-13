@@ -7,7 +7,6 @@ import model.CurrentUserModel;
 public class UpdateCommand implements ICommand {
     @Override
     public String execute(String context) {
-        System.out.println(context);
         CurrentUserModel model = CurrentUserModel.getInstance();
         Gson gson = new Gson();
 
@@ -15,7 +14,6 @@ public class UpdateCommand implements ICommand {
 
         model.getCards().clear();
         for (int i = 0; i < cards.length; ++i) {
-            System.out.println(cards[i]);
             model.getCards().add(gson.fromJson(cards[i], Card.class));
         }
 

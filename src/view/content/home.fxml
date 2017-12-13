@@ -4,70 +4,68 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<VBox minHeight="500.0" minWidth="610.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home">
-   <children>
-      <VBox prefHeight="327.0" prefWidth="563.0" style="-fx-background-image: url(../resources/business.jpg); -fx-background-size: 100%; -fx-background-position: 50%;">
-         <children>
+<AnchorPane minHeight="500.0" minWidth="610.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="610.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.HomeController">
+    <VBox minHeight="500.0" minWidth="610.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="500.0" prefWidth="610.0">
+        <VBox prefHeight="327.0" prefWidth="563.0"
+              style="-fx-background-image: url(/resources/business.jpg); -fx-background-size: 100%; -fx-background-position: 50%;">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PowerBank">
-               <font>
-                  <Font name="Avenir Next Bold" size="36.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="8.0" left="25.0" top="20.0" />
-               </VBox.margin>
+                <font>
+                    <Font name="Avenir Next Bold" size="36.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets bottom="8.0" left="25.0" top="20.0"/>
+                </VBox.margin>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your money is our money.">
-               <font>
-                  <Font name="Avenir Next Regular" size="17.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="25.0" />
-               </VBox.margin>
+                <font>
+                    <Font name="Avenir Next Regular" size="17.0"/>
+                </font>
+                <VBox.margin>
+                    <Insets left="25.0"/>
+                </VBox.margin>
             </Text>
-         </children>
-      </VBox>
-      <HBox alignment="CENTER_LEFT">
-         <children>
+        </VBox>
+        <HBox alignment="CENTER_LEFT">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Все деньги">
-               <font>
-                  <Font name="Avenir Next Regular" size="24.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="8.0" left="8.0" />
-               </HBox.margin>
+                <font>
+                    <Font name="Avenir Next Regular" size="24.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets bottom="8.0" left="8.0"/>
+                </HBox.margin>
             </Text>
-            <StackPane maxHeight="33.0" prefHeight="33.0" prefWidth="332.0" />
+            <StackPane maxHeight="33.0" prefHeight="33.0" prefWidth="332.0"/>
             <Text fx:id="allMoney" strokeType="OUTSIDE" strokeWidth="0.0" text="Money">
-               <font>
-                  <Font name="Avenir Next Regular" size="24.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="8.0" />
-               </HBox.margin>
+                <font>
+                    <Font name="Avenir Next Regular" size="24.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets right="8.0"/>
+                </HBox.margin>
             </Text>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER_LEFT">
-         <children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT">
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Текущая карта">
-               <font>
-                  <Font name="Avenir Next Regular" size="24.0" />
-               </font>
-               <HBox.margin>
-                  <Insets bottom="8.0" left="8.0" />
-               </HBox.margin>
+                <font>
+                    <Font name="Avenir Next Regular" size="24.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets bottom="8.0" left="8.0"/>
+                </HBox.margin>
             </Text>
-            <StackPane maxHeight="33.0" prefHeight="33.0" prefWidth="335.0" />
+            <StackPane maxHeight="33.0" prefHeight="33.0" prefWidth="335.0"/>
             <Text fx:id="currentCardMoney" strokeType="OUTSIDE" strokeWidth="0.0" text="Money">
-               <font>
-                  <Font name="Avenir Next Regular" size="24.0" />
-               </font>
-               <HBox.margin>
-                  <Insets right="8.0" />
-               </HBox.margin>
+                <font>
+                    <Font name="Avenir Next Regular" size="24.0"/>
+                </font>
+                <HBox.margin>
+                    <Insets right="8.0"/>
+                </HBox.margin>
             </Text>
-         </children>
-      </HBox>
-      <JFXComboBox fx:id="currentCard" onAction="#changeCard" prefHeight="27.0" prefWidth="183.0" style="-fx-background-color: #DBF6F9;" />
-   </children>
-</VBox>
+        </HBox>
+        <JFXComboBox fx:id="currentCard" onAction="#changeCard" prefHeight="27.0" prefWidth="183.0"
+                     style="-fx-background-color: #DBF6F9;"/>
+    </VBox>
+</AnchorPane>

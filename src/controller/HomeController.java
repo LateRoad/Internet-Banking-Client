@@ -2,6 +2,7 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 import logic.entity.Card;
@@ -11,10 +12,12 @@ import java.math.BigDecimal;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Home implements Initializable {
-    public Text allMoney;
-    public Text currentCardMoney;
-    public JFXComboBox currentCard;
+public class HomeController implements Initializable {
+    @FXML public Text allMoney;
+    @FXML public Text currentCardMoney;
+    @FXML public JFXComboBox currentCard;
+
+    private static final String CARD_NUMBER_MASK = "**** ";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -23,9 +26,9 @@ public class Home implements Initializable {
         for (Card card : model.getCards()) {
             BigDecimal cardMoney = new BigDecimal(card.getMoney());
             moneySum = moneySum.add(cardMoney);
-            currentCard.getItems().add("**** " + card.getNumber().split(" ")[3]);
-            currentCard.getSelectionModel().select("**** " + card.getNumber().split(" ")[3]);
-            setCurrentCard("**** " + card.getNumber().split(" ")[3]);
+            currentCard.getItems().add(CARD_NUMBER_MASK + card.getNumber().split(" ")[3]);
+            currentCard.getSelectionModel().select(CARD_NUMBER_MASK + card.getNumber().split(" ")[3]);
+            setCurrentCard(CARD_NUMBER_MASK + card.getNumber().split(" ")[3]);
         }
         allMoney.setText("$ " + moneySum.toString());
     }

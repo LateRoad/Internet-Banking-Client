@@ -11,7 +11,7 @@ import model.CurrentUserModel;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Cards implements Initializable {
+public class CardsController implements Initializable {
     @FXML public TableView<Card> tableViewCard;
     @FXML public TableColumn<Card, String> numberColumn;
     @FXML public TableColumn<Card, String> endDateColumn;

@@ -9,15 +9,13 @@ import logic.connection.ServerConnection;
 import java.io.IOException;
 
 public class Client extends Application {
-    Stage window;
+    private Stage window;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
-        window.setOnCloseRequest(event -> {
-            closeProgram();
-        });
+        window.setOnCloseRequest(event -> closeProgram());
         window.setResizable(false);
         window.setTitle("PowerBank");
         window.setScene(new Scene(root));
