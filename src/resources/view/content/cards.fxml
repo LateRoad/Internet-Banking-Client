@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane maxHeight="500.0" maxWidth="610.0" minHeight="500.0" minWidth="610.0" prefHeight="500.0" prefWidth="610.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lateroad.bank.controller.CardsController">
+    <TableView fx:id="tableViewCard" layoutX="14.0" layoutY="14.0" prefHeight="500.0" prefWidth="610.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="numberColumn" prefWidth="171.0" text="Номер карты"/>
+            <TableColumn fx:id="endDateColumn" minWidth="0.0" prefWidth="102.0" text="Срок действия"/>
+            <TableColumn fx:id="moneyColumn" prefWidth="336.0" text="Деньги на карте"/>
+        </columns>
+    </TableView>
+</AnchorPane>
